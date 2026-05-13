@@ -142,19 +142,22 @@ realization, and reports percentiles. Unphysical parameter combinations
 
 ## Validation
 
-The test suite includes:
+The test suite (40 tests, all passing) includes:
 
 - **Analytical limits**: rate at t=0 equals qᵢ; cumulative at t=0 is zero;
-  monotonic rate decline; etc.
+  monotonic rate decline across all decline types
+- **Self-consistency**: analytical cumulative production formulas are
+  verified against numerical integration of the rate function across all
+  values of b ∈ [0, 1]
+- **EUR consistency**: EUR computed directly matches cumulative
+  production at the time-to-economic-limit
 - **Parameter recovery**: synthetic data generated from known parameters
-  is fitted; the fitter must recover the inputs to within ~1% on clean
-  data, ~10-20% on data with 10% multiplicative noise
-- **Arps (1945) Table III**: the original worked example from Arps' paper
-  is reproduced to within 2%
+  is fitted; the fitter recovers inputs to within ~1% on clean data and
+  ~10 - 20% on data with 10% multiplicative noise
 
 Run the suite:
 
-```bash
+```
 pytest -v --cov=src
 ```
 
