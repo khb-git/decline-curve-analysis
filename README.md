@@ -20,6 +20,8 @@ The headline analysis: given a well's historical production, produce a
 probabilistic forecast of remaining recoverable volume with quantified
 uncertainty.
 
+**📊 See the [full workflow notebook](notebooks/01_full_workflow.ipynb)** for a complete walkthrough on a synthetic Bakken well, including model comparison, probabilistic EUR, and a 20-year production fan chart with uncertainty bands.
+
 ## Features
 
 - **Arps decline curves**: exponential, hyperbolic, and harmonic models with
